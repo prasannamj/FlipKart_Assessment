@@ -1,0 +1,139 @@
+package com.Flipkart.pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class FlipkarPage {
+	
+
+    private WebDriver driver;
+
+    // Constructor initializes WebDriver instance and elements
+    public FlipkarPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+    
+    
+    public By FashionSection = By.xpath("//*[text()='Fashion']");
+    
+    public By Kids = By.xpath("//a[text() = 'Kids']");
+    
+    public By Boys_Girls_Jeans = By.xpath("//a[text() = 'Boys & Girls Jeans']");
+    
+    public By Price_Low_to_high_Sort = By.xpath("//*[text()='Price -- Low to High']");
+    
+    public By Highlighted_Low_to_high_Sort = By.xpath("//*[@class='zg-M3Z _0H7xSG']");
+
+    public By First_Item = By.xpath("(//*[@class='wvIX4U'])[1]");
+
+    public By First_Item_name = By.xpath("//*[@class='VU-ZEz']");
+
+    public By First_Item_price = By.xpath("//*[@class='Nx9bqj CxhGGd']");
+
+    public By Size = By.xpath("//*[@id='swatch-0-size']");
+
+    public By Add_to_cart_BTN = By.xpath("//*[text()='Add to cart']");
+    
+    public By cart_Item_name = By.xpath("//*[@class='gE4Hlh']");
+    
+    public By cart_Item_price = By.xpath("//*[@class='LAlF6k re6bBo']");
+	
+	
+	public void MouseHoverOnFashionSection() 
+	{
+	
+		WebElement fashion = driver.findElement(FashionSection);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(fashion).perform();
+	}
+	
+	
+
+	public void MouseHoverOnKidsSection() 
+	{
+	
+		WebElement kids = driver.findElement(Kids);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(kids).perform();
+	}
+	
+	
+	public void click_Boys_Girls_Jeans()
+	{
+		WebElement BGjeans = driver.findElement(Boys_Girls_Jeans);	
+		BGjeans.click();
+	}
+	
+	public void click_Price_Low_to_high_Sort()
+	{
+		WebElement Price_sort = driver.findElement(Price_Low_to_high_Sort);	
+		Price_sort.click();
+	}
+	
+	public void click_First_Item()
+	{
+		WebElement First_Item_click = driver.findElement(First_Item);	
+		First_Item_click.click();
+	}
+	
+	public String Get_First_Item_name()
+	{
+		WebElement first_Item_name= driver.findElement(First_Item_name);
+		String itemname = first_Item_name.getText();
+		return itemname;	
+	}
+	
+	public String Get_First_Item_price()
+	{
+		WebElement first_Item_price= driver.findElement(First_Item_price);
+		String itemPrice = first_Item_price.getText();
+		return itemPrice;	
+	}
+	
+	
+	public void Select_Size()
+	{
+		WebElement size = driver.findElement(Size);	
+		size.click();
+	}
+	
+	
+	public void click_Add_to_cart_BTN()
+	{
+		WebElement Add_to_cart = driver.findElement(Add_to_cart_BTN);	
+		Add_to_cart.click();
+	}
+	
+	
+	
+	public String Get_cart_Item_name()
+	{
+		WebElement Kart_Item_name= driver.findElement(cart_Item_name);
+		String itemname = Kart_Item_name.getText();
+		return itemname;	
+	}
+	
+	public String Get_cart_Item_price()
+	{
+		WebElement Kart_Item_price= driver.findElement(cart_Item_price);
+		String itemPrice = Kart_Item_price.getText();
+		return itemPrice;	
+	}
+	
+	
+	public boolean FirstItem_is_Displayed()
+	{
+		WebElement FirstItem= driver.findElement(First_Item);
+		boolean isdisplayed = FirstItem.isDisplayed();
+		return isdisplayed;
+		
+	}
+	
+	
+	
+}

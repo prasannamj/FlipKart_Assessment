@@ -1,0 +1,28 @@
+1750086121980	Rename package 'com.XRD_DDA.pageObjects'
+1750086136533	Rename package 'com.XRD_DDA.testCases'
+1750086150961	Rename package 'com.XRD_DDA.testData'
+1750086170023	Rename package 'com.XRD_DDA.utilities'
+1750086183472	Delete element
+1750086204181	Delete element
+1750086219947	Delete element
+1750086351551	Delete elements
+1750086969023	Delete elements
+1750098838387	Rename type 'LoginPage'
+1750137820939	Delete elements
+1750140146185	Delete element
+1750143046430	Delete elements
+1750145445078	Delete elements
+1750145763988	Delete elements
+1750145833904	Rename type 'TC_LoginTest_001'
+1750145841131	Delete element
+1750145861478	Delete element
+1750145890321	Delete elements
+1750145897391	Delete elements
+1750149890358	Delete elements
+1750149894201	Delete element
+1750178478587	Delete element
+1750178516712	Delete element
+1750178554939	Delete element
+1750178561196	Delete elements
+1750178570540	Delete elements
+1750178738404	Rename field 'loginPage'

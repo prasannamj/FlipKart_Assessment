@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FlipKart]">
+  <test thread-count="5" name="XRD(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.Flipkart.testCases.TC_LoginTest_001">
+        <methods>
+          <include name="Select_Item"/>
+          <include name="startReport"/>
+          <include name="teardown"/>
+          <include name="teardown1"/>
+          <include name="endReport"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.Flipkart.testCases.TC_LoginTest_001 -->
+    </classes>
+  </test> <!-- XRD(failed) -->
+</suite> <!-- Failed suite [FlipKart] -->

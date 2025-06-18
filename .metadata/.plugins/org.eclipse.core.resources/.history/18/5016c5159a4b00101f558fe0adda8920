@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-17T14:18:05 IST" name="FlipKart" finished-at="2025-06-17T14:18:42 IST" duration-ms="36948">
+    <groups>
+    </groups>
+    <test started-at="2025-06-17T14:18:05 IST" name="XRD" finished-at="2025-06-17T14:18:42 IST" duration-ms="36948">
+      <class name="com.Flipkart.testCases.FlipkartTest">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:04 IST" name="startReport" finished-at="2025-06-17T14:18:05 IST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:05 IST" name="setup" finished-at="2025-06-17T14:18:16 IST" duration-ms="11629" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Find_Item()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:16 IST" name="Find_Item" finished-at="2025-06-17T14:18:20 IST" duration-ms="4083" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Find_Item -->
+        <test-method is-config="true" signature="teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:20 IST" name="teardown1" finished-at="2025-06-17T14:18:21 IST" duration-ms="294" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Find_Item status=SUCCESS method=FlipkartTest.Find_Item()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown1 -->
+        <test-method signature="Sort_Item_by_price()[pri:2, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:21 IST" name="Sort_Item_by_price" finished-at="2025-06-17T14:18:25 IST" duration-ms="4356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Sort_Item_by_price -->
+        <test-method is-config="true" signature="teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:25 IST" name="teardown1" finished-at="2025-06-17T14:18:25 IST" duration-ms="281" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Sort_Item_by_price status=SUCCESS method=FlipkartTest.Sort_Item_by_price()[pri:2, instance:com.Flipkart.testCases.FlipkartTest@4e08711f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown1 -->
+        <test-method signature="Select_Item()[pri:3, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:25 IST" name="Select_Item" finished-at="2025-06-17T14:18:34 IST" duration-ms="9017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Select_Item -->
+        <test-method is-config="true" signature="teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:34 IST" name="teardown1" finished-at="2025-06-17T14:18:35 IST" duration-ms="262" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Select_Item status=SUCCESS method=FlipkartTest.Select_Item()[pri:3, instance:com.Flipkart.testCases.FlipkartTest@4e08711f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown1 -->
+        <test-method signature="Verify_Displayed_Item()[pri:4, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:35 IST" name="Verify_Displayed_Item" finished-at="2025-06-17T14:18:40 IST" duration-ms="5185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Displayed_Item -->
+        <test-method is-config="true" signature="teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:40 IST" name="teardown1" finished-at="2025-06-17T14:18:40 IST" duration-ms="147" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Verify_Displayed_Item status=SUCCESS method=FlipkartTest.Verify_Displayed_Item()[pri:4, instance:com.Flipkart.testCases.FlipkartTest@4e08711f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown1 -->
+        <test-method signature="Verify_Kart_Item()[pri:5, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:40 IST" name="Verify_Kart_Item" finished-at="2025-06-17T14:18:40 IST" duration-ms="313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Kart_Item -->
+        <test-method is-config="true" signature="teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:40 IST" name="teardown1" finished-at="2025-06-17T14:18:40 IST" duration-ms="188" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Verify_Kart_Item status=SUCCESS method=FlipkartTest.Verify_Kart_Item()[pri:5, instance:com.Flipkart.testCases.FlipkartTest@4e08711f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown1 -->
+        <test-method signature="Verify_ItemName_and_Price()[pri:6, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:40 IST" name="Verify_ItemName_and_Price" finished-at="2025-06-17T14:18:40 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_ItemName_and_Price -->
+        <test-method is-config="true" signature="teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:40 IST" name="teardown1" finished-at="2025-06-17T14:18:41 IST" duration-ms="173" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Verify_ItemName_and_Price status=SUCCESS method=FlipkartTest.Verify_ItemName_and_Price()[pri:6, instance:com.Flipkart.testCases.FlipkartTest@4e08711f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown1 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:41 IST" name="teardown" finished-at="2025-06-17T14:18:42 IST" duration-ms="941" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]" started-at="2025-06-17T14:18:42 IST" name="endReport" finished-at="2025-06-17T14:18:43 IST" duration-ms="961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.Flipkart.testCases.FlipkartTest -->
+    </test> <!-- XRD -->
+  </suite> <!-- FlipKart -->
+</testng-results>

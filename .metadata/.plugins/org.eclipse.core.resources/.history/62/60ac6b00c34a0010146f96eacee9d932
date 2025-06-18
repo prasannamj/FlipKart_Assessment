@@ -1,0 +1,236 @@
+package com.Flipkart.utilities;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.security.spec.KeySpec;
+import java.util.HashMap;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESedeKeySpec;
+
+import org.apache.commons.codec.binary.Base64;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ProcessData {
+
+	private static final String UNICODE_FORMAT = "UTF8";
+	public static final String DESEDE_ENCRYPTION_SCHEME = "DESede";
+	private KeySpec ks;
+	private SecretKeyFactory skf;
+	private Cipher cipher;
+	byte[] arrayBytes;
+	private String myEncryptionKey;
+	private String myEncryptionScheme;
+	SecretKey key;
+	HashMap<String,String> mUsrPwd;
+	
+
+	public ProcessData() throws Exception {
+		myEncryptionKey = "ThisIsSpartaThisIsSparta";
+		myEncryptionScheme = DESEDE_ENCRYPTION_SCHEME;
+		arrayBytes = myEncryptionKey.getBytes(UNICODE_FORMAT);
+		ks = new DESedeKeySpec(arrayBytes);
+		skf = SecretKeyFactory.getInstance(myEncryptionScheme);
+		cipher = Cipher.getInstance(myEncryptionScheme);
+		key = skf.generateSecret(ks);
+	}
+
+
+	public String encrypt(String unencryptedString) {
+		String encryptedString = null;
+		try {
+			cipher.init(Cipher.ENCRYPT_MODE, key);
+			byte[] plainText = unencryptedString.getBytes(UNICODE_FORMAT);
+			byte[] encryptedText = cipher.doFinal(plainText);
+			encryptedString = new String(Base64.encodeBase64(encryptedText));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return encryptedString;
+	}
+
+
+	public String decrypt(String encryptedString) {
+		String decryptedText=null;
+		try {
+			cipher.init(Cipher.DECRYPT_MODE, key);
+			byte[] encryptedText = Base64.decodeBase64(encryptedString);
+			byte[] plainText = cipher.doFinal(encryptedText);
+			decryptedText= new String(plainText);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return decryptedText;
+	}
+
+	public HashMap<String, String> ReadUsernameAndPassword(){
+		String path=System.getProperty("user.dir");
+		String separator=System.getProperty("file.separator");
+		
+		String xlsFilePath = path+separator+"testData"+separator+"UsernameAndPassword.xlsx";
+		String paramSheetName="UserPwd";
+		
+		FileInputStream fis;
+		Workbook wb;
+		org.apache.poi.ss.usermodel.Sheet paramSh = null;
+		try {
+			 fis = new FileInputStream(new File(xlsFilePath));
+			 
+			 wb=new XSSFWorkbook(fis);
+			 paramSh=wb.getSheet(paramSheetName);
+		} catch (Exception e1) {
+			try {
+				fis = new FileInputStream(xlsFilePath);
+				wb=new HSSFWorkbook(fis);
+				paramSh=wb.getSheet(paramSheetName);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	
+		//Classname & Parameter data in XLS
+		int rowNum=paramSh.getPhysicalNumberOfRows();
+	
+		mUsrPwd=new HashMap<String, String>();
+				
+		for(int i=1;i<rowNum;i++){				
+			Row row=paramSh.getRow(i);
+			Cell paramKey=row.getCell(0);
+			Cell paramVal=row.getCell(1);
+			
+			DataFormatter df = new DataFormatter();
+			String paramvalue = df.formatCellValue(paramVal);
+			
+			mUsrPwd.put(paramKey.getStringCellValue(), paramvalue);
+		}
+		
+		return mUsrPwd;
+	}
+
+
+	public static void main(String args []) throws Exception
+	{
+/*		String dateFmtPattern=null;
+
+		String dateTxt="06/03/2020";
+
+		dateFmtPattern="MM/dd/yyyy";
+		SimpleDateFormat sdf = new SimpleDateFormat(dateFmtPattern);
+        sdf.setLenient(false);
+        try {
+            sdf.parse(dateTxt);
+            System.out.println("Parse success");
+        } catch (ParseException e) {
+        	System.out.println("Parse err:"+ e.getMessage());
+        }
+
+		dateFmtPattern="dd.MM.yyyy";
+		dateTxt="03.06.2020";
+		sdf = new SimpleDateFormat(dateFmtPattern);
+        sdf.setLenient(false);
+        try {
+            sdf.parse(dateTxt);
+            System.out.println("Parse success");
+        } catch (ParseException e) {
+        	System.out.println("Parse err:"+ e.getMessage());
+        }
+
+		dateFmtPattern="dd/MM/yyyy";
+		dateTxt="03/06/2020";
+		sdf = new SimpleDateFormat(dateFmtPattern);
+        sdf.setLenient(false);
+        try {
+            sdf.parse(dateTxt);
+            System.out.println("Parse success");
+        } catch (ParseException e) {
+        	System.out.println("Parse err:"+ e.getMessage());
+        }
+
+        dateFmtPattern="yyyy/MM/dd";
+        dateTxt="2020/06/03";
+		sdf = new SimpleDateFormat(dateFmtPattern);
+        sdf.setLenient(false);
+        try {
+            sdf.parse(dateTxt);
+            System.out.println("Parse success");
+        } catch (ParseException e) {
+        	System.out.println("Parse err:"+ e.getMessage());
+        }
+
+        dateFmtPattern="dd-MM-yyyy";
+        dateTxt="03-06-2020";
+		sdf = new SimpleDateFormat(dateFmtPattern);
+        sdf.setLenient(false);
+        try {
+            sdf.parse(dateTxt);
+            System.out.println("Parse success");
+        } catch (ParseException e) {
+        	System.out.println("Parse err:"+ e.getMessage());
+        }*/
+
+
+		
+		
+/*		Calendar cal = Calendar.getInstance();
+		Date date=cal.getTime();
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy HH:MM");
+	    String currentDateStr = formatter.format(date);
+*/
+		
+/*		SimpleDateFormat dateFmt = new SimpleDateFormat("dd MMMM yyyy");
+		String dateSelection="16 January 2020";
+		
+		Date dtFmt = dateFmt.parse(dateSelection);
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+		String currentDateStr = formatter.format(dtFmt);
+		
+		System.out.println("Current Date format: "+ currentDateStr);
+*/		
+		/*SimpleDateFormat fmt= new SimpleDateFormat();
+		fmt.parse(dateSelection);
+	*/
+
+/*		ArrayList<String> lst=new ArrayList<String>();
+		String symptomTxt="";
+		lst.add("a");
+		lst.add("b");
+		lst.add("c");
+		
+		int index=0;
+		for(; index<lst.size()-1; index++)
+			symptomTxt+=lst.get(index)+"/";
+		symptomTxt+=lst.get(index);
+*/
+		
+/*		Calendar cal = Calendar.getInstance();
+		Date date=cal.getTime();
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
+		String expectedDateStr = formatter.format(date);
+*/
+		
+		ProcessData td= new ProcessData();
+		String target1="JDIgKySqTqlOEHQybFheYZlwstOdLBKWdWOrjDkwbyUzrwfWrssDDItbcpSblTwd";   //zHpzRR3xLB
+		String encrypted=td.encrypt(target1);
+		System.out.println("String To Encrypt: "+ target1);
+		System.out.println("Encrypted String:" + encrypted);
+		
+//		String target2="Z1xpQf/bAD5UkroOhYq7jNxfo8PL6tMGzmI49PzE98p0K5e/ooM5gg=="; 
+//		String decrypted=td.decrypt(target2); System.out.println("String To Dencrypt: "+target2); 
+//		System.out.println("Decrypted String:" + decrypted);
+		 
+
+	}
+
+}
+  

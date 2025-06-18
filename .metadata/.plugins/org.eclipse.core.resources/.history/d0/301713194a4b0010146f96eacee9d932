@@ -1,0 +1,162 @@
+package com.Flipkart.testCases;
+
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+import com.Flipkart.pageObjects.FlipkarPage;
+
+
+
+public class TC_LoginTest_001 extends BaseClass {
+//	WebDriver driver;
+    FlipkarPage loginPage;
+	String Itemname ;
+	String Itemprice;
+	
+	String kartItemname;
+	String kartItemprice;
+
+
+	@Test(priority = 0)
+	public void Find_Item() throws Exception
+	{
+		
+		logger = extent.createTest("FlipKart");
+		
+		loginPage =	new FlipkarPage(driver);
+		wait(driver,loginPage.FashionSection);
+		loginPage.MouseHoverOnFashionSection();
+		
+		wait(driver,loginPage.Kids);
+		loginPage.MouseHoverOnKidsSection();
+
+		wait(driver,loginPage.Boys_Girls_Jeans);
+		loginPage.click_Boys_Girls_Jeans();
+		
+		if(driver.getTitle().contains("Kids"))
+		{
+			logger.createNode("Verify Item page").pass("Selected Kids Item page Is Displayed" ).info("Title is :" +driver.getTitle());
+		}
+		else
+		{
+			logger.createNode("Verify Item page").fail("Selected Kids Item page Is not Displayed");
+		}
+
+		
+		
+		
+	}
+	@Test (priority = 2)
+	public void Sort_Item_by_price() throws Exception
+	{
+	
+		wait(driver,loginPage.Price_Low_to_high_Sort);
+		loginPage.click_Price_Low_to_high_Sort();
+		
+		Thread.sleep(4000);
+		if(loginPage.Price_Sorted() ==true)
+		{
+			logger.createNode("Verify price Low to Hight is selected or not").pass("price--Low to Hight is selected");
+		}
+		else
+		{
+			logger.createNode("Verify price Low to Hight is selected or not").fail("price--Low to Hight is not selected");
+		}
+		
+	}
+	
+		
+	
+		@Test (priority = 3)
+		public void Select_Item() throws Exception
+		{
+			
+			String parentWindow = driver.getWindowHandle();
+
+			Thread.sleep(5000);
+			
+			loginPage.click_First_Item();
+		
+
+	        // Get all window handles
+	        Set<String> allWindows = driver.getWindowHandles();
+
+	        // Switch to the new window
+	        for (String window : allWindows) {
+	            if (!window.equals(parentWindow)) {
+	                driver.switchTo().window(window);
+	                break;
+	            }
+	        }
+	       
+	        String childTitle = driver.getTitle();
+	        System.out.println("Child window title: " + childTitle);
+
+	        if(childTitle.contains("mahi creation")) {
+				logger.createNode("Verify price Child Window Opened or Not").pass("Child window is Displayed with selected Item").info("page Title is : "+ childTitle);
+	        } else {
+				logger.createNode("Verify price Child Window Opened or Not").fail("Child window is not Displayed with selected Item");
+	        }
+	        
+			
+	}
+		
+
+		@Test (priority = 4)
+		public void Verify_Displayed_Item() throws Exception
+		{
+		
+			wait(driver,loginPage.First_Item_name);
+			Itemname = loginPage.Get_First_Item_name();
+			System.out.println("First_Item_name : "+Itemname);
+
+			wait(driver,loginPage.First_Item_price);
+			Itemprice = loginPage.Get_First_Item_price();
+			System.out.println("First_Item_price : "+Itemprice);
+			
+			 if(loginPage.First_Item_name_isDisplayed()==true && loginPage.First_Item_price_isDisplayed()==true) {
+					logger.createNode("Verify Item Name & Item price is Displayed or Not").pass("Item Name & Item price are Displayed").info("Item Name : "+Itemname).info("Item price : "+Itemprice);;
+		        } else {
+					logger.createNode("Verify Item Name & Item price is Displayed or Not").fail("Item Name & Item price are not Displayed");
+		        }
+
+			wait(driver,loginPage.Size);
+			loginPage.Select_Size();
+
+			wait(driver,loginPage.Add_to_cart_BTN);
+			loginPage.click_Add_to_cart_BTN();
+			
+			Thread.sleep(4000);
+
+		}
+		
+//		@Test (priority = 5)
+		public void Verify_Kart_Item() throws Exception
+		{
+			if(driver.getTitle().contains("Shopping Cart"))
+			{
+				logger.createNode("Verify Shopping Cart Page is Displayed or Not").pass("Shopping Cart page Is Displayed" ).info("Title is :" +driver.getTitle());
+			}
+			else
+			{
+				logger.createNode("Verify Shopping Cart Page is Displayed or Not").fail("Shopping Cart page Is not Displayed");
+			}
+
+			
+
+			wait(driver,loginPage.cart_Item_name);
+			kartItemname = loginPage.Get_cart_Item_name();
+			System.out.println("cart_Item_name : "+kartItemname);
+
+			
+			wait(driver,loginPage.cart_Item_price);
+			kartItemprice = loginPage.Get_cart_Item_price();
+			System.out.println("cart_Item_price :"+kartItemprice);
+		}
+}

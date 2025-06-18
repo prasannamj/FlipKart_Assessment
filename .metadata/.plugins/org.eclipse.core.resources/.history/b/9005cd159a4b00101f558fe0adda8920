@@ -1,0 +1,36 @@
+<h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>FlipKart</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table border="1">
+<tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:41</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BaseClass.teardown()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&lt;&lt;teardown</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="a26f67">  <td>25/06/17 14:18:40</td>   <td>-183</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.Verify_ItemName_and_Price()[pri:6, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">Verify_ItemName_and_Price</td> 
+  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:05</td>   <td>-35987</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&gt;&gt;BaseClass.setup(java.lang.String)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&gt;&gt;setup</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:40</td>   <td>-175</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BaseClass.teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&lt;&lt;teardown1</td> 
+<td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:42</td>   <td>1048</td> <td title="&lt;&lt;BaseClass.endReport()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&lt;&lt;endReport</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:40</td>   <td>-175</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BaseClass.teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&lt;&lt;teardown1</td> 
+<td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="a26f67">  <td>25/06/17 14:18:25</td>   <td>-15315</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.Select_Item()[pri:3, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">Select_Item</td> 
+  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:40</td>   <td>-175</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BaseClass.teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&lt;&lt;teardown1</td> 
+<td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:40</td>   <td>-175</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BaseClass.teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&lt;&lt;teardown1</td> 
+<td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="a26f67">  <td>25/06/17 14:18:40</td>   <td>-690</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.Verify_Kart_Item()[pri:5, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">Verify_Kart_Item</td> 
+  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:40</td>   <td>-175</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BaseClass.teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&lt;&lt;teardown1</td> 
+<td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="a26f67">  <td>25/06/17 14:18:16</td>   <td>-24348</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.Find_Item()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">Find_Item</td> 
+  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:40</td>   <td>-175</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BaseClass.teardown1(org.testng.ITestResult)[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&lt;&lt;teardown1</td> 
+<td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="959778">  <td>25/06/17 14:18:04</td>   <td>-36193</td> <td title="&gt;&gt;BaseClass.startReport()[pri:0, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">&gt;&gt;startReport</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="a26f67">  <td>25/06/17 14:18:21</td>   <td>-19957</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.Sort_Item_by_price()[pri:2, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">Sort_Item_by_price</td> 
+  <td>main@1554547125</td>   <td></td> </tr>
+<tr bgcolor="a26f67">  <td>25/06/17 14:18:35</td>   <td>-6029</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.Verify_Displayed_Item()[pri:4, instance:com.Flipkart.testCases.FlipkartTest@4e08711f]">Verify_Displayed_Item</td> 
+  <td>main@1554547125</td>   <td></td> </tr>
+</table>

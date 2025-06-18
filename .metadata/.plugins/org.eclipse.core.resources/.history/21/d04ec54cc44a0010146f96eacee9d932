@@ -1,0 +1,178 @@
+package com.Flipkart.utilities;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class ReadConfig {
+
+	
+	Properties pro;
+	
+	public ReadConfig()
+	{
+		File src = new File("./Configurations/Config.properties");
+		
+		try {
+			FileInputStream fis =new FileInputStream(src);
+			pro = new Properties();
+			pro.load(fis);
+		}catch(Exception e)
+		{
+			System.out.println("Exception is " + e.getMessage());
+		}
+	}
+	
+	public String GetGuruAppURL()
+	{
+		String url = pro.getProperty("GuruAPPURL");
+		return url;
+	}
+	public String GetGuruAppUserID()
+	{
+		String url = pro.getProperty("GuruAppUserID");
+		return url;
+	}
+	public String GetGuruAppPassword()
+	{
+		String url = pro.getProperty("GuruAppPassword");
+		return url;
+	}
+	
+	public String GetGuruAppInvaldPassword()
+	{
+		String url = pro.getProperty("GuruAppinvalidPassword");
+		return url;
+	}
+	
+	
+	public String GetAppURL()
+	{
+		String url = pro.getProperty("baseUrl");
+		return url;
+	}
+	
+	public String GetUserID()
+	{
+		String Userid = pro.getProperty("validUserId");
+		return Userid;
+	}
+	
+	public String GetInvalidUserID()
+	{
+		String InvalidUserID = pro.getProperty("InvalidUserID");
+		return InvalidUserID;
+	}
+	
+	public String GetPassword()
+	{
+		String password = pro.getProperty("password");
+		return password;
+	}
+	
+	public String GetChromePath()
+	{
+		String ChromePath = pro.getProperty("ChromePath");
+		return ChromePath;
+	}
+	
+	public String GetIEPath()
+	{
+		String IEPath = pro.getProperty("IEPath");
+		return IEPath;
+	}
+	public String GetFFPath()
+	{
+		String FFPath = pro.getProperty("firefoxPath");
+		return FFPath;
+	}
+	
+	
+	public String GetVINNumber()
+	{
+		String Vin = pro.getProperty("VINNumber");
+		return Vin;
+	}
+	
+	public String GetQuickTestVin()
+	{
+		String Vin = pro.getProperty("QuickTestVin");
+		return Vin;
+	}
+	
+	public String GetQuickTesthistory()
+	{
+		String Vin = pro.getProperty("QuickTestHistory");
+		return Vin;
+	}
+	
+	public String GetPCVIN()
+	{
+		String Vin = pro.getProperty("PCVIN");
+		return Vin;
+	}
+	
+	public String GetCVVIN()
+	{
+		String Vin = pro.getProperty("CVVIN");
+		return Vin;
+	}
+	
+	public String GetCloseCaseCauseandRemedyVIN()
+	{
+		String Vin = pro.getProperty("CloseCaseCauseandRemedy");
+		return Vin;
+	}
+	
+	
+	
+	public String GetBuleBadgeVin()
+	{
+		String Vin = pro.getProperty("BuleBadgeVin");
+		return Vin;
+	}
+	
+	public String GetFC_HighlightVIN()
+	{
+		String Vin = pro.getProperty("FC_HighlightVIN");
+		return Vin;
+	}
+	
+	public String Get_QT_MMC_GreyQTRefresh()
+	{
+		String Vin = pro.getProperty("QT_MMC_GreyQTRefresh");
+		return Vin;
+	}
+	
+	public String Get_EV_Vin()
+	{
+		String Vin = pro.getProperty("EV_Vin");
+		return Vin;
+	}
+	
+	public String Get_FIN_Vin()
+	{
+		String Vin = pro.getProperty("FINPopupVIN");
+		return Vin;
+	}
+	
+	public String Get_Ghost_Vin()
+	{
+		String Vin = pro.getProperty("Ghost_Vin");
+		return Vin;
+	}
+	
+	
+	public String GetClosecaseVin()
+	{
+		String Vin = pro.getProperty("CloseCase");
+		return Vin;
+	}
+	
+	
+	public String Getbrowser()
+	{
+		String bsr = pro.getProperty("Browser");
+		return bsr;
+	}
+}
